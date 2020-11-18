@@ -8,7 +8,7 @@ body{
   background-color: rgba(47, 118, 210, 0.5);
 }
 #app{
-  width: 50%;
+  width: 40%;
   margin: auto;
   margin-top: 40px;
   display: flex;
@@ -33,11 +33,18 @@ header .input-button{
   display: flex;
   justify-content: space-around;
 }
-header input,button{
-  width: 250px;
+header input{
+  flex-grow: 1;
   height: 35px;
   border-radius: 5px;
   font-size: 18px;
+}
+header button{
+  width: 100px;
+  height: 35px;
+  border-radius: 5px;
+  font-size: 18px;
+  margin-left:10px;
 }
 header input:focus{
   box-shadow: 0 0 10px #888888;
@@ -57,7 +64,6 @@ header button:hover{
   width: 100%;
   margin-top: 40px;
   font-size: 20px;
-  padding: 0 70px;
 }
 .row{
   width: 100%;

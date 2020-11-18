@@ -16,9 +16,11 @@
         <img :src="logo" alt="">
         <!-- input e button -->
         <div class="input-button">
-          <input type="text" v-model="itemList" v-on:keyup.enter="addItemKey" placeholder=" Cose da fare...">
-          <button type="button" v-on:click="addItemButton">Aggiungi alla lista</button>
-          <button type="button" v-on:click="removeAll">Reset</button>
+          <input type="text" v-model="itemList" v-on:keydown.enter="addItemKey" placeholder=" To do list...">
+          <div class="button">
+            <button type="button" v-on:click="addItemButton">Add</button>
+            <button type="button" v-on:click="removeAll">Reset</button>
+          </div>
         </div>
       </header>
 

@@ -18,7 +18,7 @@ var app=new Vue({
       }else {
         this.list.push(this.itemList);
       }
-      this.itemList=''
+      this.itemList='';
     }
   },
 
@@ -41,7 +41,7 @@ var app=new Vue({
 
     //funzione per rimuovere cancellare tutta la lista
     removeAll:function () {
-      this.list=[];
+      this.list.length==0 ? alert('La lista è vuota') : this.list=[];
     }
   }
 });
