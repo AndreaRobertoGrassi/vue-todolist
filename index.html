@@ -5,18 +5,20 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
     <link rel="stylesheet" href="css/style.css">
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
-    <title></title>
+    <title>To Do List</title>
   </head>
   <body>
 
     <div id="app">
       <!-- intestazione -->
       <header>
+        <!-- logo -->
         <img :src="logo" alt="">
+        <!-- input e button -->
         <div class="input-button">
-          <input type="text" v-model="itemList" v-on:keyup.enter="enter" placeholder=" Cose da fare...">
-
-          <button v-on:click="add">Aggiungi alla lista</button>
+          <input type="text" v-model="itemList" v-on:keyup.enter="addItemKey" placeholder=" Cose da fare...">
+          <button type="button" v-on:click="addItemButton">Aggiungi alla lista</button>
+          <button type="button" v-on:click="removeAll">Reset</button>
         </div>
       </header>
 
