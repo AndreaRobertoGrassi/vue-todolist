@@ -1,3 +1,46 @@
-.none{
-  display: none;
+/* regole generali */
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  background-color: rgba(47, 118, 210, 0.6);
+}
+#app{
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* intestazione */
+header{
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+img{
+  width: 50%;
+  height: auto;
+}
+header .input-button{
+  margin-top: 40px;
+  width: 30%;
+  display: flex;
+  justify-content: space-around;
+}
+
+/* corpo principlae */
+.container{
+  width: 30%;
+  margin-top: 40px;
+  font-size: 20px;
+}
+.row{
+  width: 100%;
+  display: flex;
+  justify-content:space-between;
+  margin: 10px 0;
 }

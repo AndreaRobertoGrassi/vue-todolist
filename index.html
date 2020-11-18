@@ -10,16 +10,21 @@
   <body>
 
     <div id="app">
+      <!-- intestazione -->
       <header>
         <img :src="logo" alt="">
-        <input type="text" v-model="message" placeholder="inserisci un elemento...">
-        <button v-on:click="button">Aggiungi</button>
+        <div class="input-button">
+          <input type="text" v-model="itemList" placeholder="inserisci un elemento...">
+          <button v-on:click="add">Aggiungi alla lista</button>
+        </div>
       </header>
-      <div class="container">
-        <ul>
-          <li v-for="item in todos">{{item}} <i class="fas fa-times"></i></li>
 
-        </ul>
+      <!-- lista -->
+      <div class="container">
+        <div class="row" v-for="(item, index) in list">
+          <div>{{item}}</div>
+          <i v-on:click="remove(index)" class="fas fa-times" ></i>
+        </div>
       </div>
     </div>
 

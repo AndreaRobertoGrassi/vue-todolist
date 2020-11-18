@@ -2,16 +2,17 @@ var app=new Vue({
   el:'#app',
   data:{
     logo:'img/logo.png',
-    i:0,
-    message:'',
-    todos:[]
+    itemList:'',
+    list:[]
   },
   methods:{
-    button:function () {
-      this.testo=this.message;
-      this.todos[this.i]=this.message;
-      this.message='';
-      this.i++;
+    add:function () {
+      this.list.push(this.itemList);
+      this.itemList='';
+
     },
+    remove:function (index) {
+       this.list.splice(index,1);
+    }
   }
 });
