@@ -1,17 +1,14 @@
+
 var app=new Vue({
   el:'#app',
   data:{
-
     logo:'img/logo.png',
     itemList:'',
-    list:[],
+    i:0,
+    list:[]
+  },
 
-    // focus automatico sull'input
-    focus:Vue.directive('focus',{
-      inserted:function (el) {
-        el.focus();
-      }
-    }),
+  methods:{
 
     //funzione per aggiungere un elemento
     addItem:function () {
@@ -21,27 +18,16 @@ var app=new Vue({
       }else if (this.list.includes(this.itemList)) { //se l'input è gia stato inserito
         alert('elemento già inserito');
       }else {
-        this.list.push(this.itemList);
+        Vue.set(this.list,this.i,this.itemList);
+        this.i++;
       }
       this.itemList='';
-    }
-  },
-
-  methods:{
-
-    //funzione per aggiungere un elemento tramite tastiera
-    addItemKey:function () {
-      this.addItem();
-    },
-
-    //funzione per aggiungere un elemento tramite button
-    addItemButton:function () {
-      this.addItem();
     },
 
     //funzione per eliminare l'elemento selezionato
     remove:function (index) {
-       this.list.splice(index,1);
+      Vue.delete(this.list,index,this.itemList);
+      this.i--;
     },
 
     //funzione per rimuovere cancellare tutta la lista
