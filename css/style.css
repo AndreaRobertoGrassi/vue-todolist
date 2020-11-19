@@ -68,8 +68,6 @@ header button:hover{
   max-height: 400px;
   margin-top: 40px;
   font-size: 20px;
-  overflow-y: auto;
-  overflow-x: hidden;
 }
 .row{
   width: 100%;
@@ -78,6 +76,7 @@ header button:hover{
   justify-content:space-between;
   margin: 10px 0;
   align-items: center;
+  border-radius: 7px;
 }
 .row div{
   font-size: 25px;
