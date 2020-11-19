@@ -6,6 +6,7 @@
 }
 body{
   background-color: rgba(56, 88, 113, 0.76);
+  overflow: hidden;
 }
 #app{
   width: 40%;
@@ -64,8 +65,11 @@ header button:hover{
 /* corpo principlae */
 .container{
   width: 100%;
+  max-height: 400px;
   margin-top: 40px;
   font-size: 20px;
+  overflow-y: auto;
+  overflow-x: hidden;
 }
 .row{
   width: 100%;
@@ -77,6 +81,9 @@ header button:hover{
 }
 .row div{
   font-size: 25px;
+}
+.row div::first-letter {
+  text-transform: uppercase;
 }
 .row i{
   font-size: 30px;

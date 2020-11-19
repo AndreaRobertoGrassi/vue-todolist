@@ -15,8 +15,6 @@ var app=new Vue({
 
     //funzione per aggiungere un elemento
     addItem:function () {
-      // prima lettera maiuscola
-      this.itemList = this.itemList.substr(0,1).toUpperCase()+this.itemList.substr(1,this.itemList.length).toLowerCase();
 
       if (this.itemList=='') { //se non inserisco niente
         alert('attenzione inserisci un elemento');
