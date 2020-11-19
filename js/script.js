@@ -7,7 +7,7 @@ var app=new Vue({
     list:[],
 
     // focus automatico sull'input
-    created:Vue.directive('focus',{
+    focus:Vue.directive('focus',{
       inserted:function (el) {
         el.focus();
       }
@@ -30,7 +30,6 @@ var app=new Vue({
   },
 
   methods:{
-
 
     //funzione per aggiungere un elemento tramite tastiera
     addItemKey:function () {
