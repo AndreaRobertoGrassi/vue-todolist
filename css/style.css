@@ -38,6 +38,7 @@ header input{
   height: 35px;
   border-radius: 5px;
   font-size: 18px;
+  padding: 0 7px;
 }
 header button{
   width: 100px;

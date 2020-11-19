@@ -6,6 +6,13 @@ var app=new Vue({
     itemList:'',
     list:[],
 
+    // focus automatico sull'input
+    created:Vue.directive('focus',{
+      inserted:function (el) {
+        el.focus();
+      }
+    }),
+
     //funzione per aggiungere un elemento
     addItem:function () {
       // prima lettera maiuscola
@@ -23,6 +30,7 @@ var app=new Vue({
   },
 
   methods:{
+
 
     //funzione per aggiungere un elemento tramite tastiera
     addItemKey:function () {
@@ -43,5 +51,6 @@ var app=new Vue({
     removeAll:function () {
       this.list.length==0 ? alert('La lista è vuota') : this.list=[];
     }
+
   }
 });
