@@ -14,7 +14,7 @@ var app=new Vue({
     addItem:function () {
 
       if (this.itemList=='') { //se non inserisco niente
-        alert('attenzione inserisci un elemento');
+        alert('inserisci un elemento');
       }else if (this.list.includes(this.itemList)) { //se l'input è gia stato inserito
         alert('elemento già inserito');
       }else {
@@ -33,6 +33,7 @@ var app=new Vue({
     //funzione per rimuovere cancellare tutta la lista
     removeAll:function () {
       this.list.length==0 ? alert('La lista è vuota') : this.list=[];
+      this.i=0;
     }
 
   }
